@@ -1,5 +1,5 @@
 ---
-- name: Include dynamic variables 
+-name: Include dynamic variables 
   hosts: all
   tasks:
   import_playbook: ../static-assignments/common.yml 
@@ -8,10 +8,10 @@
     - always
 
 
-- name: Webserver assignment
+-name: Webserver assignment
   import_playbook: ../static-assignments/webservers.yml
 
 
- - name: loadbalancers assignment
+ -name: loadbalancers assignment
    import_playbook: ../static-assignments/loadbalancers.yml
    when: load_balancer_is_required 
